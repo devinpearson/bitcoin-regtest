@@ -1,6 +1,8 @@
 #!/bin/bash
 DIR=$HOME/regtest
 
+echo "Starting Bitcoin REGTEST from ${DIR}..."
+
 command -v bitcoind >/dev/null 2>&1 || { echo >&2 "I require bitcoind but it's not installed. run brew install bitcoin. Aborting."; exit 1; }
 if open -Ra "Bitcoin Core" ; then
   echo "VERIFIED: 'Bitcoin Core' is installed"
